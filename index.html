@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemeenskapsbewustheid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7; /* Light gray background color */
+            color: #333;
+        }
+        header {
+            background-color: #006400; /* Darkish green color */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .frames {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .frame {
+            flex-basis: calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .frame:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+            header {
+                font-size: 18px; /* Adjust font size for better readability on mobile */
+            }
+            .frame {
+                flex-basis: calc(100% - 20px);
+            }
+            .responsive-title {
+                font-size: 1.2em; /* Adjust font size for mobile */
+            }
+            .smaller-title {
+                font-size: 1.4em; /* Adjust font size for smaller screens */
+            }
+        }
+        .bottom-image {
+            text-align: center;
+            margin-top: 2em;
+            position: relative;
+            background-image: url('https://th.bing.com/th/id/OIP.5Km-rPYa9T4A6JE4zQUengHaDt?w=334&h=175&c=7&r=0&o=5&pid=1.7');
+            background-size: cover;
+            height: 175px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        .language-select {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .language-select select {
+            border: none;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 1em;
+            font-size: 12px;
+            color: #888;
+        }
+        .responsive-title {
+            font-size: 1.8em; /* Further decreased font size for mobile */
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="responsive-title smaller-title">Gemeenskapsbewustheid</h1>
+    </header>
+    <div class="container">
+        <div class="language-select">
+            <select onchange="changeLanguage(this.value)">
+                <option value="af">Afrikaans</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <h2>Ons Doel</h2>
+        <p>By Gemeenskapsbewustheid streef ons daarna om bewustheid rondom besoedeling te verhoog en ons omgewing te bewaar vir toekomstige geslagte. Saamwerk maak 'n verskil.</p>
+        
+        <h2>Aksies</h2>
+        <p>Ons organiseer gereeld opruimingsaksies en deel bewustheid oor energiebesparing, herwinningsinisiatiewe, en omgewingsvriendelike skoonmaakmiddels.</p>
+        
+        <h2>Jou Bydrae</h2>
+        <p>Jy kan bydra deur herwinning in jou huis, omgewingsvriendelike praktyke by jou werk, en deelname aan gemeenskapsprojekte.</p>
+        
+        <h2>Hoe om Ons Te Help</h2>
+        <div class="frames">
+            <div class="frame">
+                <h3>By Jou Huis</h3>
+                <p>Herwin en verminder afval. Plant inheemse plante vir die omgewing. Gebruik omgewingsvriendelike skoonmaakmiddels.</p>
+                <img src="https://th.bing.com/th/id/OIP.VNcNi7aYpDbvRHlPH6QVTgHaDX?w=327&h=159&c=7&r=0&o=5&pid=1.7" alt="Image Placeholder">
+            </div>
+            <div class="frame">
+                <h3>By Jou Werk</h3>
+                <p>Implementeer 'n papierlose beleid. Bevorder energiebesparing en bewustheid onder kollegas. Neem deel aan gemeenskapsprojekte.</p>
+                <img src="https://th.bing.com/th/id/OIP.ev3q3b35tDB_b1oiyUEXuQHaE8?w=258&h=180&c=7&r=0&o=5&pid=1.7" alt="Image Placeholder">
+            </div>
+            <div class="frame">
+                <h3>By Jou Gemeenskap</h3>
+                <p>Organiseer opruimingsaksies en bewustheidsveldtogte. Stel projekte voor om 'n gesonder en skoner gemeenskap te bou.</p>
+                <img src="https://th.bing.com/th/id/OIP.IcWTS6D2fQaMABUzbDZ1sgHaEK?w=302&h=180&c=7&r=0&o=5&pid=1.7"Image Placeholder">
+            </div>
+        </div>
+    </div>
+    
+    <div class="bottom-image">
+        <!-- Empty div for the bottom border image -->
+    </div>
+    
+    <div class="copyright">
+        &copy; 2023 EditBuddy | Handre Laubscher
+    </div>
+    
+    <script>
+        function changeLanguage(selectedLanguage) {
+            // Redirect to the corresponding language version of the page
+            if (selectedLanguage === 'en') {
+                window.location.href = 'path-to-english-version.html';
+            }
+            // No need to redirect for Afrikaans as it's already the current page
+        }
+    </script>
+</body>
+</html>

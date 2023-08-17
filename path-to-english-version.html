@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7; /* Light gray background color */
+            color: #333;
+        }
+        header {
+            background-color: #006400; /* Darkish green color */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .frames {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .frame {
+            flex-basis: calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .frame:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+            header {
+                font-size: 18px; /* Adjust font size for better readability on mobile */
+            }
+            .frame {
+                flex-basis: calc(100% - 20px);
+            }
+            .responsive-title {
+                font-size: 1.2em; /* Adjust font size for mobile */
+            }
+            .smaller-title {
+                font-size: 1.4em; /* Adjust font size for smaller screens */
+            }
+        }
+        .bottom-image {
+            text-align: center;
+            margin-top: 2em;
+            position: relative;
+            background-image: url('https://th.bing.com/th/id/OIP.5Km-rPYa9T4A6JE4zQUengHaDt?w=334&h=175&c=7&r=0&o=5&pid=1.7');
+            background-size: cover;
+            height: 175px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        .language-select {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .language-select select {
+            border: none;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 1em;
+            font-size: 12px;
+            color: #888;
+        }
+        .responsive-title {
+            font-size: 1.8em; /* Further decreased font size for mobile */
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="responsive-title smaller-title">Community Awareness</h1>
+    </header>
+    <div class="container">
+        <div class="language-select">
+            <select onchange="changeLanguage(this.value)">
+                <option value="af">Afrikaans</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <h2>Our Goal</h2>
+        <p>At Community Awareness, we strive to increase awareness about pollution and preserve our environment for future generations. Together, we can make a difference.</p>
+        
+        <h2>Actions</h2>
+        <p>We regularly organize cleanup events and promote awareness about energy conservation, recycling initiatives, and environmentally friendly cleaning products.</p>
+        
+        <h2>Your Contribution</h2>
+        <p>You can contribute by recycling at home, adopting eco-friendly practices at work, and participating in community projects.</p>
+        
+        <h2>How to Help Us</h2>
+        <div class="frames">
+            <div class="frame">
+                <h3>At Your Home</h3>
+                <p>Recycle and reduce waste. Plant native plants for the environment. Use environmentally friendly cleaning products.</p>
+                <img src="https://th.bing.com/th/id/OIP.VNcNi7aYpDbvRHlPH6QVTgHaDX?w=327&h=159&c=7&r=0&o=5&pid=1.7" alt="Image Placeholder">
+            </div>
+            <div class="frame">
+                <h3>At Your Workplace</h3>
+                <p>Implement a paperless policy. Promote energy conservation and awareness among colleagues. Participate in community projects.</p>
+                <img src="https://th.bing.com/th/id/OIP.ev3q3b35tDB_b1oiyUEXuQHaE8?w=258&h=180&c=7&r=0&o=5&pid=1.7" alt="Image Placeholder">
+            </div>
+            <div class="frame">
+                <h3>In Your Community</h3>
+                <p>Organize cleanup events and awareness campaigns. Propose projects to build a healthier and cleaner community.</p>
+                <img src="https://th.bing.com/th/id/OIP.IcWTS6D2fQaMABUzbDZ1sgHaEK?w=302&h=180&c=7&r=0&o=5&pid=1.7" alt="Image Placeholder">
+            </div>
+        </div>
+    </div>
+    
+    <div class="bottom-image">
+        <!-- Empty div for the bottom border image -->
+    </div>
+    
+    <div class="copyright">
+        &copy; 2023 EditBuddy | Handre Laubscher
+    </div>
+    
+    <script>
+        function changeLanguage(selectedLanguage) {
+            // Redirect to the corresponding language version of the page
+            if (selectedLanguage === 'af') {
+                window.location.href = 'index.html';
+            }
+            // No need to redirect for English as it's already the current page
+        }
+    </script>
+</body>
+</html>
